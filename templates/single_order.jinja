@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles.css">
-    <title> {{title}} - My Toy Shop </title>
+    <title> {{title}} - Customer Order</title>
 </head>
 <body>
-    <h1> List of Toy Orders</h1>
-    <h2> Customer name : Toy ordered - £price - In Stock</h2>
-    {% for order in orders%} <!-- this is a for loop in Jinja-->
+    <h1> Order for one customer</h1> 
     <div>
         <p> 
         {{order.customer_name}} : <b> {{order.toy_description}} {{order.price}} {{order.in_stock}} </b>
         </p>
     </div>
-    {% endfor %}
 </body>
 </html>
