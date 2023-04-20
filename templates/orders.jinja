@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={{url_for('static', filename='styles.css')}}>
-    <title> {{title}} - Customer Order</title>
+    <title> {{title}} - My Toy Shop </title>  
 </head>
 <body>
-    <h1 class="something"> Order for one customer</h1> 
+    <h1> List of Toy Orders</h1>
     <h2> Customer name : Toy ordered - Price - In Stock</h2>
+    {% for order in orders%} <!-- this is a for loop in Jinja-->
     <div>
         <p> 
         {{order.customer_name}} : <b> {{order.toy_description}} {{"£{:,.2f}".format(order.price)}} {{order.in_stock}} </b>
         </p>
+        <a href = "/orders/{{ orders.index(order) }}" > Show order </a> <!--add a link to each order selcted by index in orders /-->
     </div>
-    <a href = "/orders"> Back to all Orders</a>
+    {% endfor %}
 </body>
 </html>

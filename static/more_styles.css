@@ -1,0 +1,22 @@
+.something {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 32pt;
+    color: white;
+    background-color: #1c5d99ff;
+    padding: 16px;
+}
+
+body > h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16pt;
+    background-color: #b8d4e3ff;
+    padding: 8px;
+}
+
+body >div > p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    background-color: skyblue;
+    padding: 16px;
+
+}
